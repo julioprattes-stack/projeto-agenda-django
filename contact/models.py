@@ -9,9 +9,9 @@ class ContactModel(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True)                    
     # category = models.ForeignKey()
-    # show = models.BooleanField()
+    show = models.BooleanField(default=True)
     # owner = models.ForeignKey()
-    # picture = models.ImageField()
+    picture = models.ImageField()
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
