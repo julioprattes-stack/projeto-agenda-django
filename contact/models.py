@@ -12,3 +12,6 @@ class ContactModel(models.Model):
     # show = models.BooleanField()
     # owner = models.ForeignKey()
     # picture = models.ImageField()
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
