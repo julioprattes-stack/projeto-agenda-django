@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import ContactModel
+from .models import ContactModel, CategoryModel
 
 @admin.register(ContactModel)
 class ContactAdmin(admin.ModelAdmin):
@@ -10,3 +10,8 @@ class ContactAdmin(admin.ModelAdmin):
     list_per_page = 10
     list_max_show_all = 200
     list_editable = 'first_name', 'last_name',
+
+@admin.register(CategoryModel)
+class CategorytAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    ordering = ('id',)
